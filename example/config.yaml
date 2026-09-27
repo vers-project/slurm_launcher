@@ -1,0 +1,25 @@
+# Anything you want here
+key_1:
+    sub_key_1:
+        value_1
+key_2: value_2
+key_3: value_3
+
+# The launcher specific configuration
+launcher:
+  output_dir: YOUR_OUTPUT_DIR
+  sweep:
+    key_1.sub_key_1: [option_1, option_2, option_3]
+    key_3: [option_1, option_2]
+  device_launcher:
+    device: slurm # "slurm" or "local"
+    "job-name": YOUR_JOB_NAME
+    "cpus-per-task": 24
+    "gpus-per-node": 4
+    "ntasks-per-node": 4
+    "nodes": 1
+    "time": "01:59:00"
+    "constraint": "h100"
+    qos: qos_gpu_h100-dev
+    "account": YOUR_ACCOUNT
+    "setup": "module purge; module load arch/h100; module load ffmpeg/6.1.1; export TMPDIR=TEMP_DIR"

@@ -1,0 +1,20 @@
+[project]
+name = "experiment_launcher"
+version = "0.1.0"
+description = "Experiment launcher to run multiple jobs on compute clusters"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "omegaconf",
+    "pandas"
+]
+
+[tool.ty.environment]
+root = ["./src"]
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+launch_experiment = "experiment_launcher:launch"
