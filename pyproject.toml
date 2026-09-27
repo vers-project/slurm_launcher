@@ -1,6 +1,7 @@
 [project]
 name = "experiment_launcher"
 version = "0.1.0"
+license = { text = "MIT" }
 description = "Experiment launcher to run multiple jobs on compute clusters"
 readme = "README.md"
 requires-python = ">=3.11"
